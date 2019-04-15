@@ -62,6 +62,83 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-JS基础-2" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/Sunny0902.github.io/2019/04/15/JS基础-2/" class="article-date">
+  <time datetime="2019-04-15T08:23:13.000Z" itemprop="datePublished">2019-04-15</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/Sunny0902.github.io/2019/04/15/JS基础-2/">JS基础-2</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="1-流程控制"><a href="#1-流程控制" class="headerlink" title="1.流程控制"></a>1.流程控制</h1><h2 id="1-1条件语句"><a href="#1-1条件语句" class="headerlink" title="1.1条件语句"></a>1.1条件语句</h2><h3 id="1-1-1-if语句"><a href="#1-1-1-if语句" class="headerlink" title="1.1.1 if语句"></a>1.1.1 if语句</h3><p><strong>语法结构：</strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (<span class="comment">/* 条件表达式 */</span>)&#123;</span><br><span class="line">  <span class="comment">// 成立执行语句</span></span><br><span class="line">&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">  <span class="comment">// 否则执行语句</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> (<span class="comment">/* 条件1 */</span>)&#123;</span><br><span class="line">  <span class="comment">// 成立执行语句</span></span><br><span class="line">&#125; <span class="keyword">else</span> <span class="keyword">if</span> (<span class="comment">/* 条件2 */</span>)&#123;</span><br><span class="line">  <span class="comment">// 成立执行语句</span></span><br><span class="line">&#125; <span class="keyword">else</span> <span class="keyword">if</span> (<span class="comment">/* 条件3 */</span>)&#123;</span><br><span class="line">  <span class="comment">// 成立执行语句</span></span><br><span class="line">&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">  <span class="comment">// 最后默认执行语句</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>注：(1) 在if  else if  else if   else这种语句中，只有一个条件会被满足</p>
+<p>​    (2) if (message){} 会自动将message转换true和false</p>
+<p>​    (3)转换为true   非空字符串  非0数字  true 任何对象</p>
+<p>​    (4)转换成false   空字符串          0          false  null  undefined</p>
+<p>​    </p>
+<h3 id="1-1-2-switch语句"><a href="#1-1-2-switch语句" class="headerlink" title="1.1.2 switch语句"></a>1.1.2 switch语句</h3><p>语法格式:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">switch</span> (expression) &#123;</span><br><span class="line">	  <span class="keyword">case</span> 常量<span class="number">1</span>:</span><br><span class="line">	    语句;</span><br><span class="line">	    <span class="keyword">break</span>;</span><br><span class="line">	  <span class="keyword">case</span> 常量<span class="number">2</span>:</span><br><span class="line">	    语句;</span><br><span class="line">	    <span class="keyword">break</span>;</span><br><span class="line">	  <span class="keyword">case</span> 常量<span class="number">3</span>:</span><br><span class="line">	    语句;</span><br><span class="line">	    <span class="keyword">break</span>;</span><br><span class="line">	  …</span><br><span class="line">	  <span class="keyword">case</span> 常量n:</span><br><span class="line">	    语句;</span><br><span class="line">	    <span class="keyword">break</span>;</span><br><span class="line">	  <span class="keyword">default</span>:</span><br><span class="line">	    语句;</span><br><span class="line">	    <span class="keyword">break</span>;</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
+<p>注：(1)case语句中的break可以省略，但是省略之后会有贯穿现象</p>
+<p>​    (2)default可以省略，但是省略之后没有默认的处理语句</p>
+<p>​    (3)default可以写在最后也可以写在最前，但是一般我们都写最后面</p>
+<p>​    (4)case中的值用的是三等号进行判断，同时比较值和类型</p>
+<p>​    :</p>
+<h2 id="1-2循环语句"><a href="#1-2循环语句" class="headerlink" title="1.2循环语句"></a>1.2循环语句</h2><h3 id="1-2-1-for循环"><a href="#1-2-1-for循环" class="headerlink" title="1.2.1 for循环"></a>1.2.1 for循环</h3><p>格式：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(初始语句;条件;循环体后的执行语句)&#123;</span><br><span class="line">    循环体;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+<h3 id="1-2-2-while循环"><a href="#1-2-2-while循环" class="headerlink" title="1.2.2 while循环"></a>1.2.2 while循环</h3><p>格式：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">while</span>(条件)&#123;</span><br><span class="line">  循环体;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="1-2-3-do…while循环"><a href="#1-2-3-do…while循环" class="headerlink" title="1.2.3 do…while循环"></a>1.2.3 do…while循环</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">do</span> &#123;</span><br><span class="line">  语句</span><br><span class="line">&#125;<span class="keyword">while</span>(条件)</span><br></pre></td></tr></table></figure>
+<h3 id="1-2-4-break和continue"><a href="#1-2-4-break和continue" class="headerlink" title="1.2.4 break和continue"></a>1.2.4 break和continue</h3><p>Break 是跳出当前循环</p>
+<p>Continue 是跳出当前循环一次</p>
+<h3 id="1-2-5-断点调试"><a href="#1-2-5-断点调试" class="headerlink" title="1.2.5 断点调试"></a>1.2.5 断点调试</h3><p><strong>定义</strong>：让程序停在指定行以供我们去查看程序的运行结果是否符合我们的预期，以便找到对应的问题。<br><img src="https://i.loli.net/2019/04/15/5cb4587119bfc.png" alt></p>
+<h1 id="2-数组"><a href="#2-数组" class="headerlink" title="2.数组"></a>2.数组</h1><p>1.Js有哪些数据类型：</p>
+<p>(1) 基本数据类型  Number  String  Boolean  Null  Undefined</p>
+<p>(2) 引用数据类型  Function  Object</p>
+<p>2.数组：由若干个元素(可以是不同的数据类型)组成的<u>集合</u></p>
+<p>3.使用格式：</p>
+<p>(1) 数组的声明：</p>
+<p>var arr = [1,2,3];   //声明数组的时候就赋值</p>
+<p>var arr = new Array();  //声明一个空数组</p>
+<p>(2)数组赋值:</p>
+<p>arr[0] = “aa”;</p>
+<p>arr[1] = “bb”;</p>
+<p> <strong>注</strong>：获取数组元素：仍然通过下标来获取，但是千万注意下标不要越界。</p>
+<p>​     数组的下标是从0开始统计的，比如数组中一个有10个元素，下标只能用到9</p>
+<p>(3)数组的长度：arr.length</p>
+<p>(4) 数组的遍历：</p>
+<p>for (var i = 0; i &lt; scores.length; i++) {</p>
+<pre><code>console.log(scores[i]);
+</code></pre><p>}</p>
+<p>​    </p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://Sunny0902/Sunny0902.github.io/2019/04/15/JS基础-2/" data-id="cjui7fglm00015sl3qesguvjd" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-js简介" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/Sunny0902.github.io/2019/04/14/js简介/" class="article-date">
@@ -121,7 +198,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://Sunny0902/Sunny0902.github.io/2019/04/14/js简介/" data-id="cjuh0runw0001z8l3n9t9qw36" class="article-share-link">Share</a>
+      <a data-url="http://Sunny0902/Sunny0902.github.io/2019/04/14/js简介/" data-id="cjui7fglq00025sl3iglt6i0w" class="article-share-link">Share</a>
       
       
     </footer>
@@ -205,7 +282,7 @@ JavaScript  运行在客户端(浏览器)的编程语言
 <ul>
 <li>写在script标签中</li>
 </ul>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="undefined">    alert('Hello World!');</span></span><br><span class="line"><span class="undefined">  </span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="javascript">    alert(<span class="string">'Hello World!'</span>);</span></span><br><span class="line"><span class="undefined">  </span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <ul>
 <li>写在外部js文件中，在页面引入</li>
 </ul>
@@ -996,7 +1073,7 @@ switch 语句在比较值时使用的是全等操作符, 因此不会发生类�
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://Sunny0902/Sunny0902.github.io/2019/04/13/01-JavaScript基础/" data-id="cjuh0rupq0003z8l3mxlpzqqr" class="article-share-link">Share</a>
+      <a data-url="http://Sunny0902/Sunny0902.github.io/2019/04/13/01-JavaScript基础/" data-id="cjui7fgmq00045sl380pfdi0x" class="article-share-link">Share</a>
       
       
     </footer>
@@ -1033,7 +1110,7 @@ switch 语句在比较值时使用的是全等操作符, 因此不会发生类�
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://Sunny0902/Sunny0902.github.io/2019/04/03/第一篇博客/" data-id="cjuh0ruo30002z8l35rzbf6hy" class="article-share-link">Share</a>
+      <a data-url="http://Sunny0902/Sunny0902.github.io/2019/04/03/第一篇博客/" data-id="cjui7fgls00035sl3zuz43wa0" class="article-share-link">Share</a>
       
       
     </footer>
@@ -1078,7 +1155,7 @@ switch 语句在比较值时使用的是全等操作符, 因此不会发生类�
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://Sunny0902/Sunny0902.github.io/2019/04/02/hello-world/" data-id="cjuh0runk0000z8l3sm45ma6r" class="article-share-link">Share</a>
+      <a data-url="http://Sunny0902/Sunny0902.github.io/2019/04/02/hello-world/" data-id="cjui7fgle00005sl3p5j1nbuf" class="article-share-link">Share</a>
       
       
     </footer>
@@ -1117,6 +1194,10 @@ switch 语句在比较值时使用的是全等操作符, 因此不会发生类�
     <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/Sunny0902.github.io/2019/04/15/JS基础-2/">JS基础-2</a>
+          </li>
         
           <li>
             <a href="/Sunny0902.github.io/2019/04/14/js简介/">(no title)</a>
